@@ -1,0 +1,77 @@
+{% extends "base.html" %} {% block title %}RFEX - Settings{% endblock %} 
+{% block content %}
+<div class="settings-side-bar"> 
+    <nav class="settings-navigation">
+        <a onclick="tabs(0)" class="tab active" href="#">
+            <p class="nav-profile">Profile</p>
+        </a>
+        <a onclick="tabs(1)" class="tab" href="#">
+            <p class="nav-change-pass">Change Password</p>
+        </a>
+        <a onclick="tabs(2)" class="tab" href="#">
+            <p class="nav-contributions">Your Contributions</p>
+        </a>
+        <a onclick="tabs(3)" class="tab" href="#">
+            <p class="nav-contact">Contact Us</p>
+        </a>
+    </nav>
+</div>
+
+<div class="settings-main">
+    <div class="settings-profile tabShow">
+        <h1>Personal Information</h1>
+        <h2>Full Name</h2>
+        <input type="text" class="input-name" placeholder="Eric Benabaye"></input>
+        <h2>Birthday</h2>
+        <input type="text" class="input-bday" placeholder="October 15, 2000"></input>
+        <h2>Email</h2>
+        <input type="text" class="input-email" placeholder="eric_benabaye@dlsu.edu.ph"></input>
+        <button type="button" id="change-profile-btn" class="save-btn">Save</button>
+    </div>
+    <div class="settings-pass tabShow">
+        <h1>Change Password</h1>
+        <h2>Curent Password</h2>
+        <input type="text" class="input-curr-pass"></input>
+        <h2>New Password</h2>
+        <input type="text" class="input-new-ass"></input>
+        <h2>Confirm Password</h2>
+        <input type="text" class="input-conf-pass"></input>
+        <button type="button" id="change-pass-btn" class="save-btn">Save</button>
+    </div>
+    <div class="settings-contributions tabShow">
+        <h1>Contributions</h1>
+        <h2>Add New Contributions</h2>
+        <input type="file" accept="image/*"></input>
+        <button type="button" id="add-contribution-btn" class="save-btn">Submit</button>
+    </div>
+    <div class="settings-contact tabShow">
+        <h1>Contact Us</h1>
+        <div class="settings-contact-box">
+            <input type="text" class="contact-name cantact-userinfo" placeholder="Your Name"></input>
+            <input type="text" class="contact-email cantact-userinfo" placeholder="Your Email"></input>
+            <input type="text" class="contact-subject" placeholder="Subject"></input>
+            <textarea class="contact-message" placeholder="Leave a Message"></textarea>
+            <button type="button" id="contact-us-btn" class="save-btn">Submit</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    const tanBtn = document.querySelectorAll(".tab");
+    const tab = document.querySelectorAll(".tabShow");
+
+    function tabs(i){
+    tab.forEach(function(node){
+        node.style.display = "none";
+    });
+    tab[i].style.display = "block";
+    }
+    tabs(0);
+</script>
+<script>
+    $(".tab").click(function(){
+    $(this).addClass("active").siblings().removeClass("active");})
+</script>
+
+{% endblock %}

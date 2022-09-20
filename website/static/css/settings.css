@@ -1,0 +1,70 @@
+.settings-side-bar{
+    background-color: #3568bb;
+    border-radius: 5px;
+    position: absolute;
+    float: left;
+    left: 22%;
+    top: 10%;
+    height: fit-content;
+    padding: 23px;
+    font-size: large;
+    font-weight: 600;
+}
+
+.settings-main h1{
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.settings-navigation{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+
+.tab{
+    color: #fff;
+}
+
+.tab a:hover{
+    background-color: #d2d2d2;
+}
+
+.tabShow{
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    display: none;
+    border-radius: 10px;
+    background-color: #689aec;
+    width: 500px;
+}
+
+.settings-main input{
+    width: 80%;
+    display:block;
+}
+
+.tabShow h2, input, button, textarea{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.settings-contact-box{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.settings-contact-box .cantact-userinfo{
+    width:175px;
+    height: 28px;
+}
+
+.tabShow textarea{
+    width: 400px;
+    height: 150px;
+}
+.contact-message{
+    margin-top: 10px;
+}
